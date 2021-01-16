@@ -1,0 +1,23 @@
+header {
+    background-color: black;
+    height: 110px;
+}
+
+.header_name a{
+    font-size: 40px;
+    color: greenyellow;
+    text-decoration: none;
+}
+
+.header_contents {
+    display: flex;
+}
+
+.header_right a{
+    color: honeydew;
+    text-decoration: none;
+}
+
+.header_left {
+    color: greenyellow;
+}
