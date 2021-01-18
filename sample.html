@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    .tab-group{
+        display: flex;
+        justify-content: center;
+    }
+    .tab{
+        flex-grow: 1;
+        padding:5px;
+        list-style:none;
+        border:solid 1px #CCC;
+        text-align:center;
+        cursor:pointer;
+    }
+    .panel-group{
+        height:100px;
+        border:solid 1px #CCC;
+        border-top:none;
+        background:#eee;
+    }
+    /* 非表示にさせます */
+    .panel{ 
+        display:none;
+    }
+    /*tabを上書きして発火させます*/
+    .tab.is-active{  
+        background:#F00;
+        color:#FFF;
+        transition: all 0.2s ease-out;
+    }
+
+    /*panelを上書きしてこれだけ表示させます*/
+    .panel.is-show{ 
+        display:block;
+    }
+    </style>
+</head>
+<body>
+    <!--イベントを発火させたいクラスをまずそれぞれ定義します。-->
+
+    <!--タブ-->
+    <ul class="tab-group">
+        <li class="tab tab-A is-active">タブ-1</li>　<!-- is-activeがポイント -->
+        <li class="tab tab-B">タブ-2</li>
+        <li class="tab tab-C">タブ-3</li>
+    </ul>
+　　<!--基本is-activeの時だけcssを当てる様にするのが目的です。-->
+    <!--タブを切り替えて表示するコンテンツ-->
+    <div class="panel-group">
+        <div class="panel tab-A is-show">コンテンツ-1</div> <!-- is-showがポイント -->
+        <div class="panel tab-B">コンテンツ-2</div>
+        <div class="panel tab-C">コンテンツ-3</div>
+　　　　　<!--is-showだけ表示、他は非表示という形にします。-->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            // タブに対してクリックイベントを適用
+            const tabs = document.getElementsByClassName('tab'); //ノードを取得
+
+            for(let i = 0; i < tabs.length; i++) { //繰返し構文で全てに適用
+                tabs[i].addEventListener('click', tabSwitch);
+            }
+
+            // タブをクリックすると実行する関数
+            function tabSwitch(){
+                // タブのclassの値を変更
+                document.getElementsByClassName('is-active')[0].classList.remove('is-active'); //is-activeの削除
+                this.classList.add('is-active'); //is-activeの追加
+                // コンテンツのclassの値を変更
+                document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+                const arrayTabs = Array.prototype.slice.call(tabs); //引数にとったオブジェクトを配列に変換してくれます。
+                const index = arrayTabs.indexOf(this); //配列に対してだけ使い、DOMを引数にとって一致した要素番号を戻します。
+                document.getElementsByClassName('panel')[index].classList.add('is-show');
+            };
+        });
+    </script>
+</body>
+</html>

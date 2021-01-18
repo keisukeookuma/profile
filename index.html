@@ -10,52 +10,101 @@
     <header>
         <div class="container">
             <div class="header_name">
-                <a href="#">大熊　啓輔</a>
+                <a href="#">Keisuke Okuma</a>
             </div>
             <div class="header_contents">
                 <div class="header_left">
-                    <p>理学療法士/ITエンジニア</p>
+                    <p>Physical Therapist/Engineers</p>
                 </div>
                 <div class="header_right">
-                    <a href="#">HOME</a>
-                    <a href="#">CONTENTS</a>
-                    <a href="#">Brog</a>
+                    <p class="tab tab-A is-active">HOME</p>
+                    <p class="tab tab-B">CONTENTS</p>
+                    <p class="tab tab-C">Brog</p>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <div class="container">
-            <div class="home">
-                <img src="./img/IMG_0044.JPG" alt="">
-                <h1>はじめまして</h1>
-                <p>
-                    Profileを見ていただきありがとうございます。<br>
-                    社会人として5年弱理学療法士として働き、現在はニートです
-                </p>
+            <div class="panel tab-A is-show">
+                <img src="./img/profile.jpg" alt="">
+                <div class="description">
+                    <div class="home">
+                        <h1>はじめまして</h1>
+                        <p>
+                            Profileを見ていただきありがとうございます。<br>
+                            社会人として5年弱理学療法士として働き、現在はニートです。
+                        </p>
+                        <h2></h2>
+                    </div>
+                    <div class="link">
+                        <h2>SNS</h2>
+                        <a class="twitter" href="https://twitter.com/kumaguki">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </a>
+                        <a class="facebook" href="https://www.facebook.com/keisuke.okuma.35/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <!-- <div class="contents">
-                <h1>Reha Menu</h1>
-                <p>リハビリメニューを作成するサイトです</p>
+            <div class="panel tab-B">
+                <div class="contents">
+                    <h1>Reha Menu</h1>
+                    <h2>概要</h2>
+                    <p>運動指導者向けのトレーニング用紙の作成＆共有サイト</br>素敵なイラストを使ったトレーニング用紙の無料作成や自分の考えたトレーニングメニューの共有ができます！</p>
+                    <h2>使用ツール</h2>
+                    <ul>
+                        <li>PHP/Laravel</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Conoha VPS</li>
+                    </ul>
+                    <h2>Link</h2>
+                    <a href="https://reha-menu.com/">Reha Menuへ</a>
+                </div>
+                <img src="./img/contents.png" alt="">
             </div>
-            <div class="brog">
-                <h1>Brog</h1>
-                <p>現在作成中</p>
-            </div> -->
+            <div class="panel tab-C">
+                <div class="brog">
+                    <h1>Brog</h1>
+                    <p>現在作成中</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-        <p>© 2023 by GREG SAINT. Proudly created with Wix.com</p>
-        <a class="twitter" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-            </svg>
-        </a>
-        <a class="facebook" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-            </svg>
-        </a>
+        <div class="container">
+            <div class="footer_contents">
+                <p>My Profile</p>
+            </div>
+        </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            // タブに対してクリックイベントを適用
+            const tabs = document.getElementsByClassName('tab'); //ノードを取得
+
+            for(let i = 0; i < tabs.length; i++) { //繰返し構文で全てに適用
+                tabs[i].addEventListener('click', tabSwitch);
+            }
+
+            // タブをクリックすると実行する関数
+            function tabSwitch(){
+                // タブのclassの値を変更
+                document.getElementsByClassName('is-active')[0].classList.remove('is-active'); //is-activeの削除
+                this.classList.add('is-active'); //is-activeの追加
+                // コンテンツのclassの値を変更
+                document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+                const arrayTabs = Array.prototype.slice.call(tabs); //引数にとったオブジェクトを配列に変換してくれます。
+                const index = arrayTabs.indexOf(this); //配列に対してだけ使い、DOMを引数にとって一致した要素番号を戻します。
+                document.getElementsByClassName('panel')[index].classList.add('is-show');
+            };
+        });
+    </script>
 </body>
 </html>

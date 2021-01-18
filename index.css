@@ -1,23 +1,142 @@
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 header {
     background-color: black;
     height: 110px;
+    padding: 20px 15px 10px 15px;
 }
 
 .header_name a{
     font-size: 40px;
-    color: greenyellow;
+    color: #8dbf40;
     text-decoration: none;
+    font-family: MS Sans Serif;
 }
 
 .header_contents {
     display: flex;
+    justify-content: space-between;
 }
 
-.header_right a{
+.header_right{
     color: honeydew;
+    display: flex;
+}
+
+.header_right p{
+    margin: 12px 10px 0 10px;
+    /* display: inline-block; */
+    color: #fff;
     text-decoration: none;
 }
 
-.header_left {
-    color: greenyellow;
+.header_left p{
+    color: #8dbf40;
+    margin: 15px 0 0;
+}
+
+.panel img, .panel img {
+    width: 350px;
+    height: 350px;
+    margin: 20px 15px;
+    border: 1px solid #43414170;
+    border-radius: 5px;
+}
+
+.panel img {
+    width: 250px;
+    /* height: 350px; */
+    margin: 20px 15px;
+    border: 1px solid #43414170;
+    border-radius: 5px;
+}
+
+.main_contents a {
+    text-decoration: none;
+    color: black;
+}
+
+.home {
+    margin: 5px;
+}
+
+main h1 {
+    color: #8dbf40;
+}
+
+main h2 {
+    color: #8dbf40;
+}
+
+.link a {
+    color: #525252;
+    display: inline-block;
+    margin: 0 10px 0;
+}
+
+.panel {
+    display: none;
+    justify-content: space-around;
+    margin: 20px 0 10px 0;
+    min-height: 500px;
+    padding: 10px;
+    border: 1px solid #43414170;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.panel.is-show {
+    display: flex;
+}
+
+footer {
+    border-top: 1px solid #43414170;
+    
+}
+
+footer p{
+    font-size: 15px;
+    color: #000000b3;
+}
+
+.footer_contents {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    .header_contents {
+        display: block;
+        /* justify-content: space-between; */
+    }
+
+    .header_left p{
+        margin: 0;
+        /* display: inline-block; */
+    }
+
+    .header_right {
+        justify-content: center;
+    }
+
+    .panel.is-show {
+        display: block;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 }
