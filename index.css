@@ -35,6 +35,7 @@ header {
     /* display: inline-block; */
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .header_left p{
@@ -51,7 +52,7 @@ header {
 }
 
 .panel img {
-    width: 250px;
+    width: 280px;
     /* height: 350px; */
     margin: 20px 15px;
     border: 1px solid #43414170;
